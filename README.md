@@ -14,12 +14,11 @@ babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
 ```
 ### Deploying using Github page
 
-After cloning this repository you can run 
+After cloning this repository you can run the following commands from the root directory to download all the required packages. 
 ```sh
 npm install
 yarn install
 ```
-from the root directory to download all the required packages. 
 
 ### Contribution
 
