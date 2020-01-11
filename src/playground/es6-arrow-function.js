@@ -24,4 +24,4 @@ const getFirstName = (fullName) => {
 console.log(getFirstName('Andrew Grube'))
 
 const getFirstNameArrow = (fullName) => fullName.split(' ')[0];
-console.log(getFirstNameArrow('Andrew GRUBE'))
+console.log(getFirstNameArrow('ANDREW GRUBE'))
