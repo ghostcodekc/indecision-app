@@ -2,8 +2,6 @@
 
 console.log('App.js is running!');
 
-// JSX - Javascript XML
-
 var app = {
     title: 'Indecision App',
     subtitle: 'Helping you decide on things since 2020',
