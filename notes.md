@@ -31,6 +31,7 @@ babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
 # Video 20 - Picking an Option
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707656#content)
+
 buttons can be disabled in HTML:
 
 ```{html}
@@ -41,10 +42,10 @@ buttons can be disabled in HTML:
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707658?components=buy_button%2Cdiscount_expiration%2Cgift_this_course%2Cintroduction_asset%2Cpurchase%2Cdeal_badge%2Credeem_coupon#content)
 
-# Video 22
+# Video 22 - Section Intro: React Components
 
-# Video 23
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707668#content)
 
-```
+# Video 23 - Thinking in React
 
-```
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707672#content)
