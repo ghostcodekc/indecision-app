@@ -80,3 +80,11 @@ babel src\playground\build-it-visible.js --out-file=public/scripts/app.js --pres
 # Video 23 - Thinking in React
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707672#content)
+
+[Twitter React Components Image](note-images\react_components_1.png)
+
+[Indecision App Image](note-images\react_components_2.png)
+
+# Video 24 - ES6 Classes: Part 1
+
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707674#content)
