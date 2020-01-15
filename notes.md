@@ -88,3 +88,25 @@ babel src\playground\build-it-visible.js --out-file=public/scripts/app.js --pres
 # Video 24 - ES6 Classes: Part 1
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707674#content)
+
+Constructor function is the function that gets called when you make a new instance of a class. Constructors get called implicitly.
+The below code would call the Person class and pass in the string 'Andrew Grube' and the number 30.
+
+```
+const me = new Person('Andrew Grube', 30);
+```
+
+The below code is a class. The constructor function takes in 2 arguments and sets defaults for their variables.
+
+```
+class Person {
+  constructor(name = 'Anonymous', age = 0) {
+    this.name = name;
+    this.age = age;
+  }
+}
+```
+
+# Video 25 -
+
+[video link]()
