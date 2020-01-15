@@ -1,7 +1,9 @@
 ---
 
-title: Notes taken while taking "The Complete React Developer Course (w/ Hooks and Redux)" on Udemy.
-author: Andrew Grube
+##### title: Notes taken while taking "The Complete React Developer Course (w/ Hooks and Redux)" on Udemy.
+
+##### author: Andrew Grube
+
 ...
 
 # Introduction
