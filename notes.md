@@ -187,9 +187,47 @@ ReactDOM.render(jsx, document.getElementById("app"));
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707680?start=0#content)
 
-# Video 28 -
+Components can render JSX.
+Component can render other components.
 
-[video link]()
+```javascript
+class IndecisionApp extends React.Component {
+  render() {
+    return (
+      <div>
+        <Options />
+      </div>
+    );
+  }
+}
+class Options extends React.Component {
+  render() {
+    return (
+      <div>
+        <p>Options component here</p>
+        <Option />
+      </div>
+    );
+  }
+}
+
+class Option extends React.Component {
+  render() {
+    return (
+      <div>
+        <p>Option component here</p>
+      </div>
+    );
+  }
+}
+ReactDOM.render(<IndecisionApp />, document.getElementById("app"));
+```
+
+The above code renders IndecisionApp. IndecisionApp renders a component call Options. Options renders an Option component.
+
+# Video 28 - Component Prompts
+
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707682?start=0#content)
 
 # Video 29 -
 
