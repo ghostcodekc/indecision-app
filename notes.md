@@ -36,20 +36,20 @@ babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
 
 buttons can be disabled in HTML:
 
-```{html}
-<button disabled=true>Click me</button>
+```html
+<button disabled="true">Click me</button>
 ```
 
 This will start with just a visibility toggle H1 element
 
-```
+```javascript
 const render = () => {
   const jsx = (
     <div>
       <h1>Visibility Toggle</h1>
     </div>
   );
-  ReactDOM.render(jsx, document.getElementById('app'));
+  ReactDOM.render(jsx, document.getElementById("app"));
 };
 
 render();
@@ -57,8 +57,10 @@ render();
 
 Ternary Operator. check visibility = true, if true button text says "hide details", if visibility = false the button text says "show details".
 
-```
-{visibility ? 'Hide details' : 'Show details'}
+```javascript
+{
+  visibility ? "Hide details" : "Show details";
+}
 ```
 
 # Video 21 - Build It: Visibility Toggle
@@ -69,7 +71,7 @@ Creating a visibility toggle application. It's basically just a button to show d
 
 Instead of the normal babel command, run the one below. It watches our visibility toggle app, and compiles it to app.js which the live server is watching:
 
-```
+```sh
 babel src\playground\build-it-visible.js --out-file=public/scripts/app.js --presets=env,react --watch
 ```
 
@@ -89,18 +91,22 @@ babel src\playground\build-it-visible.js --out-file=public/scripts/app.js --pres
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707674#content)
 
+```sh
+babel src/playground/es6-classes-1.js --out-file=public/scripts/app.js --presets=env,react --watch
+```
+
 Constructor function is the function that gets called when you make a new instance of a class. Constructors get called implicitly.
 The below code would call the Person class and pass in the string 'Andrew Grube' and the number 30.
 
-```
-const me = new Person('Andrew Grube', 30);
+```javascript
+const me = new Person("Andrew Grube", 30);
 ```
 
 The below code is a class. The constructor function takes in 2 arguments and sets defaults for their variables.
 
-```
+```javascript
 class Person {
-  constructor(name = 'Anonymous', age = 0) {
+  constructor(name = "Anonymous", age = 0) {
     this.name = name;
     this.age = age;
   }
@@ -117,7 +123,7 @@ Extends is a special keyword to say "we want the class 'student' to extend an ex
 
 We have to let the parent function do its thing before we do the extended class stuff. We do this by using the keyword "super". Super refers to the parent class. In this case the parent class of 'Student' is 'Person'. And if we call as a function it's the same as calling the parent constructor function.
 
-```
+```javascript
 class Person {
   constructor(name = "Anonymous", age = 0) {
     this.name = name;
