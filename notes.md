@@ -156,13 +156,36 @@ class Student extends Person {
 }
 ```
 
-# Video 26 -
+# Video 26 - Creating a React Component
 
-[video link]()
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707678?start=0#content)
 
-# Video 27 -
+Your classes have to start with an upper case letter.
 
-[video link]()
+```javascript
+class Header extends React.Component {
+  render() {
+    return (
+      <div>
+        <p>This is from header</p>
+      </div>
+    );
+  }
+}
+
+const jsx = (
+  <div>
+    <h1>Title</h1>
+    <Header />
+  </div>
+);
+
+ReactDOM.render(jsx, document.getElementById("app"));
+```
+
+# Video 27 - Nesting Components
+
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707680?start=0#content)
 
 # Video 28 -
 
