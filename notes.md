@@ -11,10 +11,8 @@ I am taking a react course to better my skills in React by completing actual pro
 Course started 01/11/2020.
 
 <!---
-Comments look like this and do not show up in the PDF
--->
-
 References are cited as @mittner2014brain or [@mittner2014brain].
+-->
 
 # Developing Tips
 
@@ -55,7 +53,7 @@ const render = () => {
 render();
 ```
 
-Ternary Operator. check visibility = true, if true button text says "hide details", if visibility = false the button text says "show details".
+Ternary Operator. `check visibility = true`, if true button text says "hide details", if `visibility = false` the button text says "show details".
 
 ```javascript
 {
@@ -95,7 +93,7 @@ babel src\playground\build-it-visible.js --out-file=public/scripts/app.js --pres
 babel src/playground/es6-classes-1.js --out-file=public/scripts/app.js --presets=env,react --watch
 ```
 
-Constructor function is the function that gets called when you make a new instance of a class. Constructors get called implicitly.
+Constructor function is the function that gets called when you make a new instance of a class. Constructors get called implicitly.  
 The below code would call the Person class and pass in the string 'Andrew Grube' and the number 30.
 
 ```javascript
@@ -117,10 +115,8 @@ class Person {
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707676?start=0#content)
 
-Learning how to create subclasses using the ES6 class syntax.
-
-Extends is a special keyword to say "we want the class 'student' to extend an existing class, which is 'person'"
-
+Learning how to create subclasses using the ES6 class syntax.  
+Extends is a special keyword to say "we want the class 'student' to extend an existing class, which is 'person'"  
 We have to let the parent function do its thing before we do the extended class stuff. We do this by using the keyword "super". Super refers to the parent class. In this case the parent class of 'Student' is 'Person'. And if we call as a function it's the same as calling the parent constructor function.
 
 ```javascript
@@ -229,13 +225,92 @@ The above code renders IndecisionApp. IndecisionApp renders a component call Opt
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707682?start=0#content)
 
-# Video 29 -
+Passing data in when we initialize our components, that data is known as "props". Props is short for properties.
 
-[video link]()
+When we create instances of react components, we can also choose to pass some data into it. That data looks very much like HTML attributes, but it's really just a set of key value pairs where the key is some sort of string and the value is anything we like (string, array, number, etc.). When we pass data into a component, we can use that data inside of the component itself. In this case we passed in a title and subtitle, and we used that information to correctly render header.
 
-# Video 30 -
+```javascript
+class IndecisionApp extends React.Component {
+  render() {
+    const title = "Indecision";
+    const subtitle = "Put your life in the hands of a computer.";
+    return (
+      <div>
+        <Header title={title} subtitle={subtitle} />
+      </div>
+    );
+  }
+}
 
-[video link]()
+class Header extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>{this.props.title}</h1>
+        <h2>{this.props.subtitle}</h2>
+      </div>
+    );
+  }
+}
+```
+
+All of your props are available on `{this.props}`. This gives us a way to set up one-way communication.  
+For example, <IndecisionApp /> can communicate some information with: `<Header/>`, `<Action />`, `<Options />`, and `<AddOption />`.  
+`<Options />` can communication also communicate some information with `<Option />`.  
+At the bottom, we can pass some props in : `ReactDOM.render(<IndecisionApp />, document.getElementById("app"));`
+
+# Video 29 - Events & Methods
+
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707684?start=0#content)
+
+We still used our jsx event attributes `onSubmit` and `onClick`.
+
+```javascript
+class AddOption extends React.Component {
+  handleAddOption(e) {
+    e.preventDefault();
+    const option = e.target.elements.option.value;
+    if (option) {
+      alert(option.trim());
+    }
+  }
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.handleAddOption}> <!-- Referenced Line of Code -->
+          <input type="text" name="option"></input>
+          <button>Add</button>
+        </form>
+      </div>
+    );
+  }
+}
+```
+
+We still referenced a function we want to call. Instead of referencing a global function at the top of the file, we are referencing a class method. A class method is contained inside of the class. That means that `<AddOption />` has everything it needs to run. It has the HTML that is eventually going to render, the event handler, and the event method. The method is defined in the `handleAddOption()`.
+
+We did that for `handleAddOption()`, `handleRemoveAll()`, and `handlePick()` in the `<Action />` component:
+
+```javascript
+class Action extends React.Component {
+  // handlePick is only accessable by this component as its scope
+  // is contained to this component.
+  handlePick() {
+    alert("handlePick");
+  }
+  render() {
+    return (
+      <div>
+        <button onClick={this.handlePick}>What Should I Do?</button>
+      </div>
+    );
+  }
+}
+```
+
+# Video 30 - Method Binding
+
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707686?start=0#content)
 
 # Video 31 -
 
