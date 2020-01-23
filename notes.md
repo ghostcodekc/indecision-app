@@ -372,6 +372,30 @@ class Options extends React.Component {
 Whenever we call `handleRemoveCall()` the context is correct. Which means if we use `handleRemoveCall()` multiple times below, we won't have to type multiple `.bind()` calls inline.  
 It also means that we just run the binding once when the component first gets initialized. It doesn't need to get rebound each time the component rerenders.
 
-# Video 31 -
+# Video 31 - What is Component State?
+
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707688#overview)
+
+[Medium Article React State vs Props](https://codeburst.io/react-state-vs-props-explained-51beebd73b21)
+[Official React Docs](https://reactjs.org/docs/faq-state.html)
+[States and Props in React](https://scotch.io/courses/5-essential-react-concepts-to-know-before-learning-redux/what-is-props-and-state-in-react)
+
+Component state allows our component to manage some data. Think about an object, with various key:value pairs. When that data changes, the component will automatically rerender to reflect those changes.  
+We did this in the jsx version of the indecision app where we had to call `render();` at the end of every function.
+
+```javascript
+const onRemoveAll = () => {
+  app.options = [];
+  render();
+};
+```
+
+With component state all we have to do is manipulate the data and the component will take care of rerendering itself.
+
+# Video 32 - Adding State to Counter App: Part I
+
+[video link]()
+
+# Video 33 - Adding State to Counter App: Part II
 
 [video link]()
