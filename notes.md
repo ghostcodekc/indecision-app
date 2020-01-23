@@ -312,6 +312,66 @@ class Action extends React.Component {
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707686?start=0#content)
 
+Options class has `handleRemoveAll()` and `render()`.
+
+If you do something like this, and then clicking on the "Remove all" button we will get an error "Cannot read property of 'props' of undefined.
+
+```javascript
+class Options extends React.Component {
+  handleRemoveAll() {
+    console.log(this.props.options);
+    // alert("some message");
+  }
+  render() {
+    return (
+      <div>
+        <button onClick={this.handleRemoveAll}>Remove All</button>
+        {this.props.options.map(option => (
+          <Option key={option} optionText={option} />
+        ))}
+      </div>
+    );
+  }
+}
+```
+
+It looks like we lose our binding to the Options class.
+
+The great thing about bind and why it's useful is that you can use the first argument to set the "this" context. So this means we can set it equal to that 'obj' object bring the context back to what we would expect.
+
+```javascript
+const obj = {
+  name: "Vikram",
+  getName() {
+    return this.name;
+  }
+};
+
+const getName = obj.getName.bind(obj);
+
+console.log(getName());
+```
+
+You can also set variables in line:
+
+```javascript
+const getName = obj.getName.bind({ name: "Andrew" });
+```
+
+More reading: [Deep dive on the bind() function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
+
+```javascript
+class Options extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleRemoveAll = this.handleRemoveAll.bind(this);
+  }
+}
+```
+
+Whenever we call `handleRemoveCall()` the context is correct. Which means if we use `handleRemoveCall()` multiple times below, we won't have to type multiple `.bind()` calls inline.  
+It also means that we just run the binding once when the component first gets initialized. It doesn't need to get rebound each time the component rerenders.
+
 # Video 31 -
 
 [video link]()
