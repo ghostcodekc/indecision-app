@@ -434,4 +434,41 @@ ReactDOM.render(<Counter />, document.getElementById("app"));
 
 # Video 33 - Adding State to Counter App: Part II
 
-[video link]()
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707694#overview)
+
+`this.setState` allows us to manipulate a state object, then the component will refresh automatically.
+
+```javascript
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleAddOne = this.handleAddOne.bind(this);
+    this.handleMinusOne = this.handleMinusOne.bind(this);
+    this.handleReset = this.handleReset.bind(this);
+    this.state = {
+      count: 0
+    };
+  }
+  handleAddOne() {
+    this.setState((prevState) => {
+      return {
+        count: prevState.count + 1
+      };
+    });
+  }
+```
+
+The variable that is passed in to the `this.setState()` is the previous state of the variables. You don't necessarily have to call it 'prevState'.
+In the above code the `handleAddOne()`is set up differently than in the counter-example.js code which is shown below:
+
+```javascript
+handleAddOne() {
+    this.setState(prevState => {
+      return {
+        count: prevState.count + 1
+      };
+    });
+  }
+```
+
+VSCode extension prettier is taking away the parenthesis around prevState variable.
