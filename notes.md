@@ -394,7 +394,43 @@ With component state all we have to do is manipulate the data and the component 
 
 # Video 32 - Adding State to Counter App: Part I
 
-[video link]()
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707692#overview)
+
+```sh
+babel src/playground/counter-example.js --out-file=public/scripts/app.js --presets=env,react --watch
+```
+
+```javascript
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleAddOne = this.handleAddOne.bind(this);
+    this.handleMinusOne = this.handleMinusOne.bind(this);
+    this.handleReset = this.handleReset.bind(this);
+  }
+  handleAddOne() {
+    console.log("handleAddOne");
+  }
+  handleMinusOne() {
+    console.log("handleMinusOne");
+  }
+  handleReset() {
+    console.log("handleReset");
+  }
+  render() {
+    return (
+      <div>
+        <h1>Count: </h1>
+        <button onClick={this.handleAddOne}>+1</button>
+        <button onClick={this.handleMinusOne}>-1</button>
+        <button onClick={this.handleReset}>reset</button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Counter />, document.getElementById("app"));
+```
 
 # Video 33 - Adding State to Counter App: Part II
 
