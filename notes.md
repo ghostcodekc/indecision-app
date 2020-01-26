@@ -487,7 +487,21 @@ VSCode extension prettier is taking away the parenthesis around prevState variab
 
 # Video 37 - Indecision State: Part II
 
-[video link]()
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707702?start=15#overview)
+
+JavaScript Demo: Array.concat():
+
+```javacript
+const array1 = ['a', 'b', 'c'];
+const array2 = ['d', 'e', 'f'];
+const array3 = array1.concat(array2);
+
+console.log(array3);
+// expected output: Array ["a", "b", "c", "d", "e", "f"]
+
+```
+
+[Additional reading on concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 
 # Video 38 - Summary: Props vs. State
 
