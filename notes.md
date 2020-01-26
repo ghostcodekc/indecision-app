@@ -505,4 +505,24 @@ console.log(array3);
 
 # Video 38 - Summary: Props vs. State
 
-[video link]()
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707704#overview)
+
+- `this.props` and `this.state` is an object in our components.
+- If some data gets passed into my component from the parent I can access that when we're rendering. If a component manages some state, it can use that state when it's rendering itself. We saw that with the `addOption` component which renders the error message that it keeps track of.
+- We have access to props when rendering, and we have access to state when rendering.
+- For state, the component itself can change the data. It does this with a `this.setState()` call.
+- A component can not change its own props. If the props are going to change, it's because they're going to get passed down from the parent.
+
+![Props vs. State](note-images/props_vs_state_1.png)
+
+- Props come from above (whether it's a parent component, or some JSX that gets passed into `ReactDOM.render()`)
+- State is defined in the component itself.
+
+![Props vs. State 2](note-images/props_vs_state_2.png)
+
+- Props can not be changed by the component itself. If some string was passed into a component and I rendered that, I wouldn't be able to change `this.props.somedata` in order to see it re-render. That's not going to work. If you do want to track changing data you have to use state.
+- State can be changed by the component itself.
+
+![Props vs. State 3](note-images/props_vs_state_3.png)
+
+![Props vs. State 4](note-images/props_vs_state_4.png)
