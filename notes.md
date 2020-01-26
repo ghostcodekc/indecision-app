@@ -533,6 +533,10 @@ console.log(array3);
 
 # Section 5: Stateless Functional Components
 
+## Video 01 - Sectional Intro
+
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707706#overview)
+
 # Section 6: Webpack
 
 # Section 7: Using a Third-Party Component
