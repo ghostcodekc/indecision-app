@@ -472,3 +472,23 @@ handleAddOne() {
 ```
 
 VSCode extension prettier is taking away the parenthesis around prevState variable.
+
+# Video 34 - Alternative setState Syntax
+
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707696#overview)
+
+# Video 35 - Build It: Adding State to VisibilityToggle
+
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707698#overview)
+
+# Video 36 - Indecision State: Part I
+
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707700#overview)
+
+# Video 37 - Indecision State: Part II
+
+[video link]()
+
+# Video 38 - Summary: Props vs. State
+
+[video link]()
