@@ -28,7 +28,9 @@ Watch babel make changes in a second terminal:
 babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
 ```
 
-# Video 20 - Picking an Option
+# Section 3: Hello React
+
+## Video 20 - Picking an Option
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707656#content)
 
@@ -61,7 +63,7 @@ Ternary Operator. `check visibility = true`, if true button text says "hide deta
 }
 ```
 
-# Video 21 - Build It: Visibility Toggle
+## Video 21 - Build It: Visibility Toggle
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707658?components=buy_button%2Cdiscount_expiration%2Cgift_this_course%2Cintroduction_asset%2Cpurchase%2Cdeal_badge%2Credeem_coupon#content)
 
@@ -73,11 +75,13 @@ Instead of the normal babel command, run the one below. It watches our visibilit
 babel src\playground\build-it-visible.js --out-file=public/scripts/app.js --presets=env,react --watch
 ```
 
-# Video 22 - Section Intro: React Components
+# Section 4: Hello React
+
+## Video 22 - Section Intro: React Components
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707668#content)
 
-# Video 23 - Thinking in React
+## Video 23 - Thinking in React
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707672#content)
 
@@ -85,7 +89,7 @@ babel src\playground\build-it-visible.js --out-file=public/scripts/app.js --pres
 
 ![Indecision App Image](note-images/react_components_2.png)
 
-# Video 24 - ES6 Classes: Part I
+## Video 24 - ES6 Classes: Part I
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707674#content)
 
@@ -111,7 +115,7 @@ class Person {
 }
 ```
 
-# Video 25 - ES6 Classes: Part II
+## Video 25 - ES6 Classes: Part II
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707676?start=0#content)
 
@@ -152,7 +156,7 @@ class Student extends Person {
 }
 ```
 
-# Video 26 - Creating a React Component
+## Video 26 - Creating a React Component
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707678?start=0#content)
 
@@ -179,7 +183,7 @@ const jsx = (
 ReactDOM.render(jsx, document.getElementById("app"));
 ```
 
-# Video 27 - Nesting Components
+## Video 27 - Nesting Components
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707680?start=0#content)
 
@@ -221,7 +225,7 @@ ReactDOM.render(<IndecisionApp />, document.getElementById("app"));
 
 The above code renders IndecisionApp. IndecisionApp renders a component call Options. Options renders an Option component.
 
-# Video 28 - Component Prompts
+## Video 28 - Component Prompts
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707682?start=0#content)
 
@@ -259,7 +263,7 @@ For example, <IndecisionApp /> can communicate some information with: `<Header/>
 `<Options />` can communication also communicate some information with `<Option />`.  
 At the bottom, we can pass some props in : `ReactDOM.render(<IndecisionApp />, document.getElementById("app"));`
 
-# Video 29 - Events & Methods
+## Video 29 - Events & Methods
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707684?start=0#content)
 
@@ -308,7 +312,7 @@ class Action extends React.Component {
 }
 ```
 
-# Video 30 - Method Binding
+## Video 30 - Method Binding
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707686?start=0#content)
 
@@ -372,7 +376,7 @@ class Options extends React.Component {
 Whenever we call `handleRemoveCall()` the context is correct. Which means if we use `handleRemoveCall()` multiple times below, we won't have to type multiple `.bind()` calls inline.  
 It also means that we just run the binding once when the component first gets initialized. It doesn't need to get rebound each time the component rerenders.
 
-# Video 31 - What is Component State?
+## Video 31 - What is Component State?
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707688#overview)
 
@@ -392,7 +396,7 @@ const onRemoveAll = () => {
 
 With component state all we have to do is manipulate the data and the component will take care of rerendering itself.
 
-# Video 32 - Adding State to Counter App: Part I
+## Video 32 - Adding State to Counter App: Part I
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707692#overview)
 
@@ -432,7 +436,7 @@ class Counter extends React.Component {
 ReactDOM.render(<Counter />, document.getElementById("app"));
 ```
 
-# Video 33 - Adding State to Counter App: Part II
+## Video 33 - Adding State to Counter App: Part II
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707694#overview)
 
@@ -473,19 +477,19 @@ handleAddOne() {
 
 VSCode extension prettier is taking away the parenthesis around prevState variable.
 
-# Video 34 - Alternative setState Syntax
+## Video 34 - Alternative setState Syntax
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707696#overview)
 
-# Video 35 - Build It: Adding State to VisibilityToggle
+## Video 35 - Build It: Adding State to VisibilityToggle
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707698#overview)
 
-# Video 36 - Indecision State: Part I
+## Video 36 - Indecision State: Part I
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707700#overview)
 
-# Video 37 - Indecision State: Part II
+## Video 37 - Indecision State: Part II
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707702?start=15#overview)
 
@@ -503,7 +507,7 @@ console.log(array3);
 
 [Additional reading on concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 
-# Video 38 - Summary: Props vs. State
+## Video 38 - Summary: Props vs. State
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707704#overview)
 
@@ -526,3 +530,33 @@ console.log(array3);
 ![Props vs. State 3](note-images/props_vs_state_3.png)
 
 ![Props vs. State 4](note-images/props_vs_state_4.png)
+
+# Section 5: Stateless Functional Components
+
+# Section 6: Webpack
+
+# Section 7: Using a Third-Party Component
+
+# Section 8: Styling React
+
+# Section 9: React-Router
+
+# Section 10: Redux
+
+# Section 11: React with Redux
+
+# Section 12: Testing Your Application
+
+# Section 13: Deploying Your Apps
+
+# Section 14: Firebase 101
+
+# Section 15: Firebase with Redux
+
+# Section 16: Firebase Authentication
+
+# Section 17: Styling Budget App
+
+# Section 18: What Now?
+
+# Section 19: Hooks, Context, Fragments, and More
