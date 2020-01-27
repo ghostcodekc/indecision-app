@@ -533,9 +533,53 @@ console.log(array3);
 
 # Section 5: Stateless Functional Components
 
-## Video 01 - Sectional Intro
+## Video 39 - Sectional Intro
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707706#overview)
+
+## Video 40 - The Stateless Functional Component
+
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707708#overview)
+
+- Stateless Functional Component
+- It is a react component, just like our class based components.
+- It is also just a function, unlike our class based components.
+- It is stateless.
+
+```javascript
+const User = () => {
+  return (
+    <div>
+      <p>Name: </p>
+      <p>Age: </p>
+    </div>
+  );
+};
+
+ReactDOM.render(<User />, document.getElementById("app"));
+```
+
+We can pass in props by passing the values into the arrow function:
+
+```javascript
+const User = props => {
+  return (
+    <div>
+      <p>Name: {props.name}</p>
+      <p>Age: {props.age}</p>
+    </div>
+  );
+};
+
+ReactDOM.render(
+  <User name="Andrew" age={30} />,
+  document.getElementById("app")
+);
+```
+
+## Video 41 - Default Prop Values
+
+[video link]()
 
 # Section 6: Webpack
 
