@@ -579,7 +579,20 @@ ReactDOM.render(
 
 ## Video 41 - Default Prop Values
 
-[video link]()
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707712#overview)
+
+You can pass in values when rendering your application:
+
+```javascript
+ReactDOM.render(
+  <IndecisionApp options={["McDonalds", "Chipotle"]} />,
+  document.getElementById("app")
+);
+```
+
+## Video 42 - React Dev Tools
+
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707714#overview)
 
 # Section 6: Webpack
 
