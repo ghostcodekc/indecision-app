@@ -594,6 +594,36 @@ ReactDOM.render(
 
 [video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707714#overview)
 
+## Video 43 - Removing Individual Options
+
+[video link](https://www.udemy.com/course/react-2nd-edition/learn/lecture/7707716#overview)
+
+- Implicitly return an object by wrapping the return value for the function body in `()`
+
+```javascript
+  handleDeleteOptions() {
+    this.setState(() => ({ options: [] }));
+  }
+```
+
+[Learn about the filter function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
+```javascript
+const words = [
+  "spray",
+  "limit",
+  "elite",
+  "exuberant",
+  "destruction",
+  "present"
+];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
+// expected output: Array ["exuberant", "destruction", "present"]
+```
+
 # Section 6: Webpack
 
 # Section 7: Using a Third-Party Component
